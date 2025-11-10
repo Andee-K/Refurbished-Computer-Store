@@ -62,7 +62,7 @@ function App() {
       </header>
 
       <main>
-        <h2>Welcome to S&T's Refurbished Computer Store</h2>
+        <h2>Welcome to S&T&apos;s Refurbished Computer Store</h2>
         <CategoryFilter category={category} setCategory={setCategory} />
         <section>
           {loading && <p>Loading products...</p>}

@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Refurbished Computer Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application for a refurbished computer store. It allows users to browse products, filter them by category, and add them to a shopping cart.
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Refurbished Computer Store is a React-based e-commerce application that provides a simple and intuitive user interface for shopping for refurbished electronics. The project was built using Vite for a fast development experience and Zustand for state management.
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Product Listing:** Displays a list of available refurbished products.
+*   **Category Filtering:** Allows users to filter products by category (Laptop, Tablet, Mobile, Accessory).
+*   **Shopping Cart:** Provides a fully functional shopping cart that allows users to:
+    *   Add items to the cart.
+    *   Increase or decrease the quantity of items.
+    *   Remove items from the cart.
+    *   Clear the entire cart.
+    *   View the total quantity and price of items in the cart.
+*   **Dynamic Data Loading:** Fetches product data from a remote API.
 
-## Expanding the ESLint configuration
+## Styling and Design
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project uses CSS Modules for styling to ensure that styles are scoped locally to components and avoid conflicts. The design is clean and minimalist, focusing on a straightforward user experience. The color scheme and layout are designed to be simple and intuitive, making it easy for users to navigate and find what they are looking for.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To get a local copy up and running, follow these simple steps.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+*   npm
+    ```sh
+    npm install npm@latest -g
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/Andee-K/Refurbished-Computer-Store.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
+3.  Run the development server
+    ```sh
+    npm run dev
+    ```
+
+## Available Scripts
+
+*   `dev`: Runs the app in the development mode.
+*   `build`: Builds the app for production to the `dist` folder.
+*   `lint`: Lints the project files.
+*   `preview`: Serves the production build locally.
+*   `deploy`: Deploys the application to GitHub Pages.
