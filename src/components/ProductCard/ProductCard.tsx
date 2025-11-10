@@ -19,6 +19,11 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div className={styles.productCard}>
+      {/* Overlay for sold out products */}
+      {product.status !== "Available" && (
+        <div className={styles.overlay}>Sold Out</div>
+      )}
+
       <h4>{product.name}</h4>
       <h5 className={styles.group}>{product.group}</h5>
       <img
@@ -33,10 +38,10 @@ const ProductCard = ({ product }: { product: Product }) => {
       <p className={styles.status}>
         {product.status === "Available" ? "In Stock" : "Out of Stock"}
       </p>
-      {/* button is disabled if 1. product is not available 2. user recently added to cart (2 sec delay) */}
+      {/* button is disabled if product not available */}
       <button
         onClick={handleAddToCart}
-        disabled={product.status !== "Available" || isAdded}
+        disabled={product.status !== "Available"}
       >
         {isAdded ? "Added to Cart!" : "Add to Cart"}
       </button>
