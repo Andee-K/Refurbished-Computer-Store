@@ -1,0 +1,118 @@
+/* --- Main Dropdown --- */
+
+.cartContainer {
+  position: relative;
+}
+
+.cartButton {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: 1px solid transparent;
+  padding: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cartQty {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 60%;
+  left: 80%;
+}
+
+.cartDetails {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 450px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid black;
+  box-shadow: var(--shadow-lg);
+  padding: 1.4rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 475px) {
+  .cartDetails {
+    width: 375px;
+  }
+}
+
+/* --- Table Styles --- */
+
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header */
+.cartTable th {
+  font-weight: 600;
+  text-align: left;
+  padding: 0.8rem 0;
+  border-bottom: 2px solid black;
+}
+
+/* Table Row  */
+.cartItem td {
+  border-bottom: 1px solid var(--gray-400);
+  padding: 0.8rem 0;
+}
+
+.itemTotal {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* --- Quantity & Footer --- */
+
+/* Styles for the <td> holding the quantity buttons */
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityControls div {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+/* Small +/- buttons */
+.quantityControls button {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+}
+
+/* Container for the Total and Clear button */
+.cartFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.cartFooter button {
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.cartFooter p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
